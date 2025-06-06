@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- Sophos Block Page [Modern Web] -->
-<title>Website Blocked: https://www.google.com/</title>
+<title>RWcal Seacrh</title>
 
 <style>
 <!--
@@ -24,12 +24,12 @@ footer { color: #ccc; font-size: 14px; width: 540px; margin: 0 auto; text-align:
 </head>
 <body>
 <div class="content blocking">
-  <div class="title" id="msg_title">Website Blocked</div>
+  <div class="title" id="msg_title">RWcal Search</div>
   <div style="display: none;" id="selectedMenuItem">UsrViewBlocked_policy</div>
   <ul class="details">
     <div id="main_block">
       <div id="msg_threat_source">
-        <li class="url">Location: https://www.google.com</li>
+        <li class="url">Search Location: https://www.google.com</li>
       </div>
       <div id="pageType" style="display: none;">BLOCK_OVERRIDE_LIST</div>
       <div id="categoryId" style="display: none;">50</div>
@@ -37,15 +37,27 @@ footer { color: #ccc; font-size: 14px; width: 540px; margin: 0 auto; text-align:
         <li>Your organization's policy prohibits access to this website.</li>
       </div>
       <div id="return_content" style="">
-        <li><input type="button" onclick="history.back();" id="lnk_return" value="Return to previous page"></li>
+        <li>
+          <form id="google_search_form" action="https://www.google.com/search" method="GET" target="_blank" style="display:inline;">
+            <input type="text" name="q" id="google_search_box" placeholder="Search with Google" style="width:300px;"/>
+          </form>
+        </li>
       </div>
       <script>
         document.getElementById('return_content').style.display = ""; 
+
+        document.getElementById('google_search_form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var query = document.getElementById('google_search_box').value;
+          if (query.trim() !== "") {
+            window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+       }
+     });
       </script>
     </div>
   </ul>
 </div>
-<footer>sophos <b>web protection</b></footer>
+<footer>rwcal <b>web seacrh</b></footer>
 
 
 </body></html>
