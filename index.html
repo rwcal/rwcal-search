@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Sophos Block Page [Modern Web] -->
+<title>Website Blocked: https://www.google.com/</title>
+
+<style>
+<!--
+body, ul, li { font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#737373;   margin:0; padding:0;}
+a:link, a:visited, a:active { text-decoration: underline; color:#015589;}
+a:hover { text-decoration: none; color:#51A8DE;}
+.content { padding: 20px 15px 15px 40px; width: 500px; margin: 70px auto 6px auto; border: #ebebeb solid 1px;}
+.blocking { border-top: #D52B1E solid 2px; border-bottom: #D52B1E solid 2px;}
+.warning { border-top: #F0AB00 solid 2px; border-bottom: #F0AB00 solid 2px;}
+.message { border-top: #0076C0 solid 2px; border-bottom: #0076C0 solid 2px;}
+.title { font-size: 24px; border-bottom: #ccc solid 1px; padding-bottom:15px; margin-bottom:15px;}
+.details li { list-style: none;   padding: 6px 0;}
+.url { font-style:italic; font-weight: 700; width: 490px; height: auto; word-break: break-all;}
+#txt_comment { width: 460px;}
+#button { font-size:11px;}
+footer { color: #ccc; font-size: 14px; width: 540px; margin: 0 auto; text-align:right; }
+-->
+</style>
+</head>
+<body>
+<div class="content blocking">
+  <div class="title" id="msg_title">Website Blocked</div>
+  <div style="display: none;" id="selectedMenuItem">UsrViewBlocked_policy</div>
+  <ul class="details">
+    <div id="main_block">
+      <div id="msg_threat_source">
+        <li class="url">Location: https://www.google.com</li>
+      </div>
+      <div id="pageType" style="display: none;">BLOCK_OVERRIDE_LIST</div>
+      <div id="categoryId" style="display: none;">50</div>
+      <div id="msg_long_reason">
+        <li>Your organization's policy prohibits access to this website.</li>
+      </div>
+      <div id="return_content" style="">
+        <li><input type="button" onclick="history.back();" id="lnk_return" value="Return to previous page"></li>
+      </div>
+      <script>
+        document.getElementById('return_content').style.display = ""; 
+      </script>
+    </div>
+  </ul>
+</div>
+<footer>sophos <b>web protection</b></footer>
+
+
+</body></html>
